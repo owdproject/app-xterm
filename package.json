@@ -1,0 +1,14 @@
+{
+  "name": "owd-app-xterm",
+  "version": "2.0.0-beta.5",
+  "license": "MIT",
+  "homepage": "https://github.com/owdproject/owd-app-xterm",
+  "author": {
+    "name": "dxlliv",
+    "url": "https://github.com/dxlliv"
+  },
+  "dependencies": {
+    "@xterm/xterm": "5.5.0",
+    "xterm-addon-fit": "^0.8.0"
+  }
+}
