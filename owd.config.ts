@@ -1,6 +1,8 @@
 export default defineDesktopApp({
     id: "org.owdproject.xterm",
-    name: "Console",
+    name: "Terminal",
+    category: 'tools',
+    provides: "terminal",
     windows: {
         main: {
             component: () => import('./app/components/Window/WindowXterm.vue'),
