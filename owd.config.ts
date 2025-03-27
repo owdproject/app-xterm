@@ -3,6 +3,7 @@ export default defineDesktopApp({
     name: "Terminal",
     category: 'tools',
     provides: "terminal",
+    icon: "lucide:console",
     windows: {
         main: {
             component: () => import('./app/components/Window/WindowXterm.vue'),
