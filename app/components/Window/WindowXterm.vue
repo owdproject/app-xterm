@@ -59,16 +59,6 @@ const fitTerminal = () => {
 const writeWelcomeMessage = () => {
   terminal?.write(welcomeMessage + '\r\n')
 }
-
-const style = `
-  .xterm-container {
-    width: 100%
-    height: 100%
-  }
-`
-const styleElement = document.createElement('style')
-styleElement.innerHTML = style
-document.head.appendChild(styleElement)
 </script>
 
 <template>
@@ -78,6 +68,10 @@ document.head.appendChild(styleElement)
 </template>
 
 <style scoped lang="scss">
+.xterm-container {
+  height: 100%;
+
+}
 :deep(.xterm) {
   height: 100%;
 
