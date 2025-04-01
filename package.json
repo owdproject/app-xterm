@@ -1,8 +1,9 @@
 {
   "name": "owd-app-xterm",
+  "private": true,
   "version": "3.0.0-alpha.0",
   "license": "MIT",
-  "homepage": "https://github.com/owdproject/owd-app-xterm",
+  "homepage": "https://github.com/owdproject/app-xterm",
   "author": {
     "name": "dxlliv",
     "url": "https://github.com/dxlliv"
