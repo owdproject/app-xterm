@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
     css: [
-        'xterm/css/xterm.css'
+        '@xterm/xterm/css/xterm.css'
     ],
 
     future: {
