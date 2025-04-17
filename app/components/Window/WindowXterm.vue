@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { Terminal } from 'xterm'
-import { FitAddon } from 'xterm-addon-fit'
+import { Terminal } from '@xterm/xterm';
+import { FitAddon } from '@xterm/addon-fit';
 
 const runtimeConfig = useRuntimeConfig()
 
 const terminalManager = useTerminalManager()
 const terminalContainer = ref<HTMLElement | null>(null)
 
-let terminal: Terminal | null = null
+const terminal = new Terminal()
 const fitAddon = new FitAddon()
 const currentInput = ref('')
+
+terminal.loadAddon(fitAddon)
 
 const welcomeMessage = `Welcome to Open Web Desktop!\r\n
 Version: ${runtimeConfig.public.coreVersion}\r
@@ -17,8 +19,6 @@ To get started, try using the 'help' command.\r`
 
 onMounted(() => {
   if (terminalContainer.value) {
-    terminal = new Terminal()
-    terminal.loadAddon(fitAddon)
     terminal.open(terminalContainer.value)
     fitAddon.fit()
 
@@ -49,7 +49,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', fitTerminal)
   terminal?.dispose()
-  terminal = null
 })
 
 const fitTerminal = () => {
