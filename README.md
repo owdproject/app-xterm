@@ -17,20 +17,21 @@ The OWD Xterm App is a simple terminal implementation for Open Web Desktop.
 2.  Install the module using npm or yarn:
 
     ```bash
-    npm install github:owdproject/app-xterm @xterm/xterm @xterm/addon-fit
+    npm install @xterm/xterm @xterm/addon-fit
+    git clone https://github.com/owdproject/app-xterm.git ./desktop/apps/app-xterm
     ```
 
 3.  Register the application in your OWD configuration file:
 
     ```typescript
     // owd.config.ts
-    import AppXterm from 'owd-app-xterm/owd.config'
+    import AppXterm from './desktop/apps/app-xterm/owd.config'
     
     export const owdConfig = {
         theme: ['github:owdproject/theme-win95', { install: true }],
     
         apps: [
-           './node_modules/owd-app-xterm',
+           './desktop/apps/app-xterm',
         ],
     
         loader: async () => {
