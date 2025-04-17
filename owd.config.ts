@@ -1,16 +1,15 @@
 export default defineDesktopApp({
     id: "org.owdproject.xterm",
-    name: "Terminal",
+    title: "Terminal",
     category: 'tools',
-    provides: "terminal",
+    provides: {
+        name: "terminal",
+        entry: "xterm"
+    },
     icon: "mdi:console",
     windows: {
         main: {
             component: () => import('./app/components/Window/WindowXterm.vue'),
-            name: "WindowXterm",
-            category: "tools",
-            title: "Console",
-            icon: "mdi:console",
             size: {
                 width: 600,
                 height: 400
@@ -22,7 +21,14 @@ export default defineDesktopApp({
             },
         }
     },
-    onLaunch: (app) => {
-        app.openWindow('main')
+    entries: {
+        xterm: {
+            command: "xterm"
+        },
+    },
+    commands: {
+        xterm: (app) => {
+            app.openWindow("main")
+        }
     }
 })
