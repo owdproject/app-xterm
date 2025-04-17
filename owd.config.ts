@@ -1,4 +1,4 @@
-export default defineDesktopApp({
+export default {
     id: "org.owdproject.xterm",
     title: "Terminal",
     category: 'tools',
@@ -31,4 +31,4 @@ export default defineDesktopApp({
             app.openWindow("main")
         }
     }
-})
+}
