@@ -1,8 +1,9 @@
 {
-  "name": "owd-app-xterm",
-  "private": true,
-  "version": "3.0.0-alpha.0",
-  "license": "MIT",
+  "name": "@owdproject/app-xterm",
+  "version": "0.0.4",
+  "description": "Xterm App for your Open Web Desktop client",
+  "keywords": ["owd-client", "owd-apps", "owd-modules", "xterm"],
+  "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/owdproject/app-xterm",
   "author": {
     "name": "dxlliv",
@@ -11,5 +12,8 @@
   "dependencies": {
     "@xterm/xterm": "5.5.0",
     "@xterm/addon-fit": "^0.10.0"
+  },
+  "peerDependencies": {
+    "@owdproject/core": ">=3.0.0-alpha.6"
   }
 }

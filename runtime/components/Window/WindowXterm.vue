@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Terminal } from '@xterm/xterm';
 import { FitAddon } from '@xterm/addon-fit';
+import {useTerminalManager} from "@owdproject/core/runtime/composables/useTerminalManager";
+import {useRuntimeConfig} from "nuxt/app";
+import {onMounted, onBeforeUnmount} from "vue"
+import {ref} from "@vue/reactivity"
 
 const runtimeConfig = useRuntimeConfig()
 
@@ -62,7 +66,7 @@ const writeWelcomeMessage = () => {
 
 <template>
   <Window>
-    <div ref="terminalContainer" class="xterm-container"></div>
+    <div ref="terminalContainer" class="xterm-container" />
   </Window>
 </template>
 
